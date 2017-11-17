@@ -21,7 +21,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-
+// Änderung
 #define MOTOR   mdriver
 
 volatile uint8_t debounce_flag=0;
