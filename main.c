@@ -1,7 +1,7 @@
 /**
   ******************************************************************************
   * @file    main.c
-  * @author  Alexander Steinmetz
+  * @author  Alexander Steinmetz Hallo Hallo
   * @version V1.0
   * @date    29-December-2016
   * @brief   main function and interrupts
@@ -21,7 +21,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-// Änderung
+// Ã„nderung
 #define MOTOR   mdriver
 
 volatile uint8_t debounce_flag=0;
@@ -37,8 +37,8 @@ for (i = 0; i < 2000000; i++);        // Warten bis Spannung stabil etwa 60 ms d
     InitClock();
     InitGPIO();
     InitInterrupt();
-    initUSART1();                       // für Empfangen von Bluetooth-Transceiver
-    init_debug();                       // für Debug-Meldungen (USART6)
+    initUSART1();                       // fÃ¼r Empfangen von Bluetooth-Transceiver
+    init_debug();                       // fÃ¼r Debug-Meldungen (USART6)
     InitTimer();                        // Timer auf 1s eingestellt
     MOTOR.init();
     //InitWDG();
@@ -63,7 +63,7 @@ for (i = 0; i < 2000000; i++);        // Warten bis Spannung stabil etwa 60 ms d
 }
 
 
-/**< USART Interrrupt für RX */
+/**< USART Interrrupt fÃ¼r RX */
 void USART1_IRQHandler (void){
 
     char cmd[2];
@@ -137,7 +137,7 @@ void USART1_IRQHandler (void){
 
 }
 
-/**< Timer 10 Interrrupt für Motoren abschalten */
+/**< Timer 10 Interrrupt fÃ¼r Motoren abschalten */
 void TIM1_UP_TIM10_IRQHandler(void){
     PRINTF("\n\rTimer-Interrupt zum Abschalten der Motoren.");
     if(TIM_GetITStatus(TIM10,TIM_IT_Update)){
